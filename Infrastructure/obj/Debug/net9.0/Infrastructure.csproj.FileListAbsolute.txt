@@ -13,3 +13,4 @@ C:\Users\Omar.Bakr\myProjects\SkiNet\Infrastructure\obj\Debug\net9.0\Infrastruct
 C:\Users\Omar.Bakr\myProjects\SkiNet\Infrastructure\obj\Debug\net9.0\refint\Infrastructure.dll
 C:\Users\Omar.Bakr\myProjects\SkiNet\Infrastructure\obj\Debug\net9.0\Infrastructure.pdb
 C:\Users\Omar.Bakr\myProjects\SkiNet\Infrastructure\obj\Debug\net9.0\ref\Infrastructure.dll
+C:\Users\Omar.Bakr\myProjects\SkiNet\Infrastructure\obj\Debug\net9.0\Infrastructure.sourcelink.json
