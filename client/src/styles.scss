@@ -1,1 +1,12 @@
 @use '@angular/material' as mat;
+
+:root {
+    @include mat.button-overrides((
+        filled-container-shape: '6px',
+        outlined-container-shape: '6px'
+    ));
+}
+
+.match-input-height {
+    height: var(--mat-form-field-container-height) !important;
+}
