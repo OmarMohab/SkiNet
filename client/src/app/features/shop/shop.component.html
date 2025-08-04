@@ -1,8 +1,6 @@
 @if (products) {
     <div class="flex flex-col gap-3">
         <div class="flex justify-between gap-3">
-            
-    
             <form 
                 #searchForm="ngForm"
                 (ngSubmit)="onSearchChange()"
@@ -38,17 +36,17 @@
     </div>
     
     <mat-paginator
-                class="bg-white p-6"
-                (page)="handlePageEvent($event)"
-                [length]="products.count"
-                [pageSize]="shopParams.PageSize"
-                [showFirstLastButtons]="true"
-                [pageSizeOptions]="pageSizeOptions"
-                [pageIndex]="shopParams.pageNumber - 1"
-                aria-label="Select Page"
-            >
+            class="bg-white p-6"
+            (page)="handlePageEvent($event)"
+            [length]="products.count"
+            [pageSize]="shopParams.PageSize"
+            [showFirstLastButtons]="true"
+            [pageSizeOptions]="pageSizeOptions"
+            [pageIndex]="shopParams.pageNumber - 1"
+            aria-label="Select Page"
+        >
     
-            </mat-paginator>
+    </mat-paginator>
     
     
     <mat-menu #sortMenu="matMenu">

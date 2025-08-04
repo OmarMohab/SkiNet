@@ -1,7 +1,7 @@
 @import "tailwindcss" important;
 
 .container {
-    @apply  mx-auto
+    @apply mx-auto;
 }
 
 .text-primary {
