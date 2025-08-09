@@ -8,6 +8,7 @@ import { AccountService } from '../../../core/services/account.service';
 import { Router } from '@angular/router';
 import { SnackbarServiceTsService } from '../../../core/services/snackbar.service.ts.service';
 import { JsonPipe } from '@angular/common';
+import { TextInputComponent } from "../../../shared/components/text-input/text-input.component";
 
 @Component({
   selector: 'app-register',
@@ -19,8 +20,9 @@ import { JsonPipe } from '@angular/common';
     MatInput,
     MatButton,
     JsonPipe,
-    MatError
-  ],
+    MatError,
+    TextInputComponent
+],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss'
 })
@@ -34,7 +36,7 @@ export class RegisterComponent {
   registerForm = this.fb.group({
     firstName: ['', Validators.required],
     lastName: ['', Validators.required],
-    email: ['', Validators.required, Validators.email],
+    email: ['', [Validators.required, Validators.email]],
     password: ['', Validators.required]
   });
 
