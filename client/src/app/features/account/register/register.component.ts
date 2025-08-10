@@ -6,7 +6,7 @@ import { MatError, MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 import { AccountService } from '../../../core/services/account.service';
 import { Router } from '@angular/router';
-import { SnackbarServiceTsService } from '../../../core/services/snackbar.service.ts.service';
+import { SnackbarService } from '../../../core/services/snackbar.service';
 import { JsonPipe } from '@angular/common';
 import { TextInputComponent } from "../../../shared/components/text-input/text-input.component";
 
@@ -15,12 +15,8 @@ import { TextInputComponent } from "../../../shared/components/text-input/text-i
   imports: [
     ReactiveFormsModule,
     MatCard,
-    MatFormField,
-    MatLabel,
-    MatInput,
     MatButton,
     JsonPipe,
-    MatError,
     TextInputComponent
 ],
   templateUrl: './register.component.html',
@@ -30,7 +26,7 @@ export class RegisterComponent {
   private fb = inject(FormBuilder);
   private accountService = inject(AccountService);
   private router = inject(Router);
-  private snack = inject(SnackbarServiceTsService);
+  private snack = inject(SnackbarService);
   validationErrors?: string[];
 
   registerForm = this.fb.group({

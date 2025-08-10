@@ -2,12 +2,12 @@ import { HttpErrorResponse, HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { catchError, throwError } from 'rxjs';
-import { SnackbarServiceTsService } from '../services/snackbar.service.ts.service';
+import { SnackbarService } from '../services/snackbar.service';
 
 export const errorInterceptor: HttpInterceptorFn = (req, next) => {
 
   const router = inject(Router);
-  const snackbar = inject(SnackbarServiceTsService);
+  const snackbar = inject(SnackbarService);
 
   return next(req).pipe(
     catchError((err: HttpErrorResponse) => {

@@ -2,6 +2,8 @@
 
 .container {
     @apply mx-auto;
+    min-width: 95%;
+
 }
 
 .text-primary {

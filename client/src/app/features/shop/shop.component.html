@@ -6,7 +6,7 @@
                 (ngSubmit)="onSearchChange()"
                 class="relative flex items-center w-full max-w-md mx-4"
             >
-                <input type="search" class="block w-full p-4 text-sm text-gray-900 border-gray-600 rounded-lg"
+                <input type="search" class="block w-full p-4 text-sm text-gray-900 bg-gray-200 rounded-lg"
                     placeholder="Search"
                     name="search"
                     [(ngModel)]="shopParams.search"
@@ -28,7 +28,7 @@
             </div>
         </div>
         
-        <div class="grid grid-cols-1 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 m-4 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-4">
             @for (product of products.data; track product.id) {
                 <app-product-item [product]="product"></app-product-item>
             }
