@@ -50,7 +50,7 @@ public class PaymentService(IConfiguration config,
             {
                 Amount = (long)cart.Items.Sum(x => x.Quantity * (x.Price * 100)) + (long)shippingPrice * 100,
                 Currency = "usd",
-                PaymentMethodTypes = ["cart"]
+                PaymentMethodTypes = ["card"]
             };
 
             intent = await service.CreateAsync(options);
