@@ -4,7 +4,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { RouterLink } from '@angular/router';
 import { MatButton } from '@angular/material/button';
 import { StripeService } from '../../core/services/stripe.service';
-import { StripeAddressElement } from '@stripe/stripe-js';
+import { StripeAddressElement, StripePaymentElement } from '@stripe/stripe-js';
 import { SnackbarService } from '../../core/services/snackbar.service';
 import { MatCheckboxChange, MatCheckboxModule } from '@angular/material/checkbox';
 import { StepperSelectionEvent } from '@angular/cdk/stepper';
@@ -31,13 +31,17 @@ export class CheckoutComponent implements OnInit, OnDestroy{
   private stripeService = inject(StripeService);
   private snackbar = inject(SnackbarService);
   private accountService = inject(AccountService);
-  addressElemet?: StripeAddressElement;
+  addressElement?: StripeAddressElement;
+  paymentElement?: StripePaymentElement;
   saveAddress = false;
 
   async ngOnInit() {
     try {
-      this.addressElemet = await this.stripeService.createAddressElement();
-      this.addressElemet.mount('#address-element')
+      this.addressElement = await this.stripeService.createAddressElement();
+      this.addressElement.mount('#address-element');
+
+      this.paymentElement = await this.stripeService.createPaymentElement();
+      this.paymentElement.mount('#payment-element');
     } catch (error: any) {
       this.snackbar.error(error.message)
     }
@@ -56,7 +60,7 @@ export class CheckoutComponent implements OnInit, OnDestroy{
   }
 
   private async getAddressFromStripeAddress(): Promise<Address | null> {
-    const result = await this.addressElemet?.getValue();
+    const result = await this.addressElement?.getValue();
     const address = result?.value.address;
 
     if (address) {
