@@ -1,9 +1,9 @@
 import { inject, Injectable, signal } from '@angular/core';
-import { environment } from '../../../environments/environment.development';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Address, User } from '../../shared/models/user';
 import { map, tap } from 'rxjs';
 import { SignalrService } from './signalr.service';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'

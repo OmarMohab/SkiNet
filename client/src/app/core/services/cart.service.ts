@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { computed, inject, Injectable, signal } from '@angular/core';
 import { Cart, CartItem } from '../../shared/models/cart';
-import { environment } from '../../../environments/environment.development';
 import { Product } from '../../shared/models/product';
 import { map } from 'rxjs';
 import { DeliveryMethod } from '../../shared/models/deliveryMethod';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
