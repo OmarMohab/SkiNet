@@ -1,0 +1,1 @@
+import{a}from"./chunk-OITZ6MXX.js";import"./chunk-3SLEQPT2.js";import"./chunk-G4ETSRAR.js";import"./chunk-MFIZZ55J.js";import"./chunk-LIX5T5KV.js";import"./chunk-UNM6CKSO.js";export{a as orderRoutes};

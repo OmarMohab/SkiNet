@@ -1,0 +1,1 @@
+import{a}from"./chunk-YCZGBOBX.js";import"./chunk-TB6CYEBQ.js";import"./chunk-G4ETSRAR.js";import"./chunk-MFIZZ55J.js";import"./chunk-OYRIX3W2.js";import"./chunk-UNM6CKSO.js";export{a as accoutRoutes};
